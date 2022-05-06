@@ -44,8 +44,8 @@ void setClock()
 void FirmwareUpdate()
 {
     X509List cert(cert_DigiCert_Global_Root_CA);
-    #define URL_fw_Version "/hafidh7/ESP8266-Update-Program-over-HTTPS/master/firmware/version.txt"
-    #define URL_fw_Bin "https://raw.githubusercontent.com/hafidh7/ESP8266-Update-Program-over-HTTPS/master/firmware/firmware.bin"
+    #define URL_fw_Version "/hafidh7/ESP8266-Update-Program-over-HTTPS/master/version.txt"
+    #define URL_fw_Bin "https://raw.githubusercontent.com/hafidh7/ESP8266-Update-Program-over-HTTPS/master/.pio/build/nodemcuv2/firmware.bin"
     WiFiClientSecure client;
 
     Serial.println("Cek Firmware Update");
