@@ -65,15 +65,16 @@ void FirmwareUpdate()
     String payload = client.readStringUntil('\n');
     payload.trim();
     if(payload.equals(FirmwareVer)) {
-        Serial.println("Device already on latest firmware version"); 
+        Serial.println("Firmware version "+payload+" is avalable");
+        Serial.println("Device already on latest firmware version");
     }
     else {
         Serial.println("New firmware detected");
-        Serial.println("Your Firmware Version "+FirmwareVer);
-        Serial.println("Firmware Version "+payload+" is avalable");
+        Serial.println("Current firmware version "+FirmwareVer);
+        Serial.println("Firmware version "+payload+" is avalable");
         ESPhttpUpdate.setLedPin(LED_BUILTIN, LOW);
         t_httpUpdate_return ret = ESPhttpUpdate.update(client, URL_fw_Bin);
-        Serial.println("Update...");
+        Serial.println("Update firmware to version "+payload);
         switch (ret) {
             case HTTP_UPDATE_FAILED:
             Serial.printf("HTTP_UPDATE_FAILD Error (%d): %s\n", ESPhttpUpdate.getLastError(), ESPhttpUpdate.getLastErrorString().c_str());
@@ -86,7 +87,7 @@ void FirmwareUpdate()
             case HTTP_UPDATE_OK:
             Serial.println("HTTP_UPDATE_OK");
             break;
-        } 
+        }
     }
 }
 
