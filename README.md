@@ -6,9 +6,9 @@ If using Arduino IDE rename the [source code](https://github.com/hafidh7/ESP8266
 
 ## .bin file (firmware)
 To get [.bin](https://github.com/hafidh7/ESP8266-Update-Program-over-HTTPS/blob/master/.pio/build/nodemcuv2/firmware.bin) file   
-- Arduino IDE
+- Arduino IDE   
 go to sketch choose export compile binary
-- PlatformIO VSCode
+- PlatformIO VSCode   
 go to .pio/build/nodemcuv2/
 
 ## certs.h  
