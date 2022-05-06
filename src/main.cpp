@@ -65,7 +65,6 @@ void FirmwareUpdate()
     String payload = client.readStringUntil('\n');
     payload.trim();
     if(payload.equals(FirmwareVer)) {
-        Serial.println("Firmware version "+payload+" is avalable");
         Serial.println("Device already on latest firmware version");
     }
     else {
