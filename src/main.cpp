@@ -34,11 +34,11 @@ void setClock()
         Serial.print(".");
         now = time(nullptr);
     }
-    // Serial.println("");
-    // struct tm timeinfo;
-    // gmtime_r(&now, &timeinfo);
-    // Serial.print("Current time: ");
-    // Serial.println(asctime(&timeinfo));
+    Serial.println("");
+    struct tm timeinfo;
+    gmtime_r(&now, &timeinfo);
+    Serial.print("Current time: ");
+    Serial.println(asctime(&timeinfo));
 }
 
 void FirmwareUpdate()
