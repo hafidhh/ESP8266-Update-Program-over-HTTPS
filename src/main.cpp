@@ -44,8 +44,8 @@ void setClock()
 void FirmwareUpdate()
 {
     X509List cert(cert_DigiCert_Global_Root_CA);
-    #define URL_fw_Version "/hafidh7/ESP-Auto-Update-Program-Online/main/version.txt"
-    #define URL_fw_Bin "https://raw.githubusercontent.com/hafidh7/ESP-Auto-Update-Program-Online/main/firmware.bin"
+    #define URL_fw_Version "/hafidh7/ESP8266-Update-Program-over-HTTPS/master/Firmware/version.txt"
+    #define URL_fw_Bin "https://raw.githubusercontent.com/hafidh7/ESP8266-Update-Program-over-HTTPS/blob/master/Firmware/firmware.bin"
     WiFiClientSecure client;
 
     Serial.println("Cek Firmware Update");
