@@ -8,8 +8,9 @@ const String FirmwareVer={"1.9"};
 
 void ConnectWiFi()
 {
-    const char* ssid = "ZTE-972ec0";
-    const char* password = "hf170798";
+    // change ssid and password
+    const char* ssid = "your ssid";
+    const char* password = "password";
     Serial.print("Connecting to ");
     Serial.println(ssid);
     WiFi.begin(ssid, password); //connecting to wifi
@@ -26,7 +27,7 @@ void ConnectWiFi()
 void setClock()
 {
     // Set time via NTP, as required for x.509 validation
-    configTime(0, 0, "pool.ntp.org", "0.pool.ntp.org");
+    configTime(0, 0, "pool.ntp.org", "time.nist.gov");
     Serial.println("Waiting for NTP time sync");
     time_t now = time(nullptr);
     while (now < 8 * 3600 * 2) {
@@ -44,6 +45,7 @@ void setClock()
 void FirmwareUpdate()
 {
     X509List cert(cert_DigiCert_Global_Root_CA);
+    //change URL_fw_Version and URL_fw_Bin with your bin file and version url.
     #define URL_fw_Version "/hafidh7/ESP8266-Update-Program-over-HTTPS/master/version.txt"
     #define URL_fw_Bin "https://raw.githubusercontent.com/hafidh7/ESP8266-Update-Program-over-HTTPS/master/.pio/build/nodemcuv2/firmware.bin"
     WiFiClientSecure client;
