@@ -1,5 +1,5 @@
 # ESP8266-Update-Program-over-HTTPS
-Program for updating esp8266 firmware over https (ota over https). In this project i updating esp8266 program from github.
+Program for updating esp8266 firmware over https (ota over https). In this project i updated esp8266 program from github.
 
 ## Arduino IDE
 If using Arduino IDE rename the [source code](https://github.com/hafidh7/ESP8266-Update-Program-over-HTTPS/blob/master/src/main.cpp) in [src](https://github.com/hafidh7/ESP8266-Update-Program-over-HTTPS/tree/master/src) folder to main.ino
