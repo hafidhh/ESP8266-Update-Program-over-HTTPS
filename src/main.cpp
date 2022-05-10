@@ -53,7 +53,8 @@ void FirmwareUpdate()
     Serial.println("Cek Firmware Update");
     client.setTrustAnchors(&cert);
     if (!client.connect(firmware_host, firmware_port)) {
-        Serial.println("Failed Connecting to Host");
+        Serial.print("Failed Connecting to ");
+        Serial.println(firmware_host);
         return;
     }
     client.print(String("GET ") + URL_fw_Version + " HTTP/1.1\r\n" + "Host: " + firmware_host + "\r\n" + "User-Agent: BuildFailureDetectorESP8266\r\n" + "Connection: close\r\n\r\n");
