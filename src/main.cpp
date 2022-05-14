@@ -111,10 +111,20 @@ void loop()
     const long mini_interval = 10000;
     unsigned long currentMillis = millis();
     if ((currentMillis - previousMillis) >= interval) {
-        // ESP will cek firmware update every 60000 milisecond   
-        setClock();
-        FirmwareUpdate();
-        previousMillis = currentMillis;
+        //Cek WiFi
+        if (WiFi.status() != WL_CONNECTED || WiFi.localIP() == IPAddress(0, 0, 0, 0))
+        {
+            //Reconnect WiFi
+            Serial.println("Reconnect WiFi");
+            WiFi.reconnect();
+        }
+        else
+        {
+            // ESP will cek firmware update every 60000 milisecond   
+            setClock();
+            FirmwareUpdate();
+            previousMillis = currentMillis;
+        } 
     }
     if ((currentMillis - previousMillis_2) >= mini_interval) {
         // LED
@@ -125,12 +135,9 @@ void loop()
         Serial.print("Idle Loop....");
         Serial.println(idle_counter++);
         previousMillis_2 = currentMillis;
-        if(idle_counter%2==0)
+        if (idle_counter%2==0)
             digitalWrite(LED_BUILTIN, HIGH);
         else 
             digitalWrite(LED_BUILTIN, LOW);
-        if(WiFi.status() == WL_CONNECTION_LOST) 
-            //Reconnect WiFi
-            ConnectWiFi();
    }
 }
