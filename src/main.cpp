@@ -5,6 +5,8 @@
 #include "certs.h"
  
 const String FirmwareVer={"1.9"};
+unsigned long previousMillis_2 = 0;
+unsigned long previousMillis = 0;
 
 void ConnectWiFi()
 {
@@ -101,9 +103,6 @@ void setup()
     setClock();
     FirmwareUpdate();
 }
-
-unsigned long previousMillis_2 = 0;
-unsigned long previousMillis = 0;
 
 void loop()
 {
