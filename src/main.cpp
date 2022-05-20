@@ -11,8 +11,8 @@ unsigned long previousMillis = 0;
 void ConnectWiFi()
 {
     // change ssid and password
-    const char* ssid = "your ssid";
-    const char* password = "password";
+    const char* ssid = "your_ssid";
+    const char* password = "your_password";
     Serial.print("Connecting to ");
     Serial.println(ssid);
     WiFi.begin(ssid, password); //connecting to wifi
@@ -111,19 +111,11 @@ void loop()
     unsigned long currentMillis = millis();
     if ((currentMillis - previousMillis) >= interval) {
         //Cek WiFi
-        if (WiFi.status() != WL_CONNECTED || WiFi.localIP() == IPAddress(0, 0, 0, 0))
-        {
-            //Reconnect WiFi
-            Serial.println("Reconnect WiFi");
+        while (WiFi.status() != WL_CONNECTED || WiFi.localIP() == IPAddress(0, 0, 0, 0))
             WiFi.reconnect();
-        }
-        else
-        {
-            // ESP will cek firmware update every 60000 milisecond   
-            setClock();
-            FirmwareUpdate();
-            previousMillis = currentMillis;
-        } 
+        setClock();
+        FirmwareUpdate();
+        previousMillis = currentMillis;
     }
     if ((currentMillis - previousMillis_2) >= mini_interval) {
         // LED
