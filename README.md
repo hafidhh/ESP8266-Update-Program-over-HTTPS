@@ -2,7 +2,7 @@
 Program for updating esp8266 firmware over https (ota over https). In this project i updated esp8266 program from github.
 
 ## Arduino IDE
-If using Arduino IDE rename the [source code](https://github.com/hafidh7/ESP8266-Update-Program-over-HTTPS/blob/master/src/main.cpp) (main.cpp) in [src](https://github.com/hafidh7/ESP8266-Update-Program-over-HTTPS/tree/master/src) folder to main.ino
+If using Arduino IDE rename the [source code](https://github.com/hafidh7/ESP8266-Update-Program-over-HTTPS/blob/master/src/main.cpp) (main.cpp) in [src](https://github.com/hafidh7/ESP8266-Update-Program-over-HTTPS/tree/master/src) folder to main.ino and copy [certs.h](https://github.com/hafidh7/ESP8266-Update-Program-over-HTTPS/blob/master/include/certs.h)  to same folder
 
 ## .bin file (firmware)
 To get [.bin](https://github.com/hafidh7/ESP8266-Update-Program-over-HTTPS/blob/master/.pio/build/nodemcuv2/firmware.bin) file   
