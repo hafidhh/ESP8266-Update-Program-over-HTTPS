@@ -10,11 +10,11 @@ to get certs.h
 2. open terminal go to [cert.py](https://github.com/hafidh7/ESP8266-Update-Program-over-HTTPS/blob/master/cert.py) directory
 3. input command
 ```yaml
-python cert.py -s api.github.com -n firmware > certs.h
+python cert.py -s raw.githubusercontent.com -n firmware > certs.h
 ```
 or
 ```yaml
-python3 cert.py -s api.github.com -n firmware > certs.h
+python3 cert.py -s raw.githubusercontent.com -n firmware > certs.h
 ```
 
 ## .bin file (firmware)
