@@ -5,8 +5,8 @@ Program for updating esp8266 firmware over https (ota over https). In this proje
 If using Arduino IDE rename the [source code](https://github.com/hafidh7/ESP8266-Update-Program-over-HTTPS/blob/master/src/main.cpp) (main.cpp) in [src](https://github.com/hafidh7/ESP8266-Update-Program-over-HTTPS/tree/master/src) folder to main.ino and copy [certs.h](https://github.com/hafidh7/ESP8266-Update-Program-over-HTTPS/blob/master/include/certs.h)  to same folder
 
 ## certs.h  
-to get certs.h
-1. install phyton3
+to get certs.h 
+1. install  [phyton3](https://www.python.org/)
 2. open terminal go to [cert.py](https://github.com/hafidh7/ESP8266-Update-Program-over-HTTPS/blob/master/cert.py) directory
 3. input command
 ```yaml
