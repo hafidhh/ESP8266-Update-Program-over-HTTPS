@@ -6,7 +6,7 @@ If using Arduino IDE rename the [source code](https://github.com/hafidh7/ESP8266
 
 ## certs.h  
 to get certs.h 
-1. install  [phyton3](https://www.python.org/)
+1. install [phyton3](https://www.python.org/)
 2. open terminal go to [cert.py](https://github.com/hafidh7/ESP8266-Update-Program-over-HTTPS/blob/master/cert.py) directory
 3. input command
 ```yaml
