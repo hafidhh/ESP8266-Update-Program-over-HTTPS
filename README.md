@@ -12,14 +12,14 @@ If using Arduino IDE rename the [source code](https://github.com/hafidh7/ESP8266
 to get certs.h  
 1. install [phyton3](https://www.python.org/)
 2. open terminal go to [cert.py](https://github.com/hafidh7/ESP8266-Update-Program-over-HTTPS/blob/master/cert.py) directory
-3. input command
-```yaml
-python cert.py -s raw.githubusercontent.com -n firmware > certs.h
-```
-or
-```yaml
-python3 cert.py -s raw.githubusercontent.com -n firmware > certs.h
-```
+3. input command  
+    ```yaml
+    python cert.py -s raw.githubusercontent.com -n firmware > certs.h
+    ```
+    or  
+    ```yaml
+    python3 cert.py -s raw.githubusercontent.com -n firmware > certs.h
+    ```
 ### Error No module named 'cryptography'  
 <img src="./img/cryptograpy_error.jpg" />  
 install cryptography
@@ -31,8 +31,8 @@ python -m pip install cryptography
 ---
 
 ## .bin file (firmware)
-To get [.bin](https://github.com/hafidh7/ESP8266-Update-Program-over-HTTPS/blob/master/.pio/build/nodemcuv2/firmware.bin) file   
-- Arduino IDE   
-go to sketch choose export compile binary
-- PlatformIO VSCode   
-go to .pio/build/nodemcuv2/
+To get [.bin](https://github.com/hafidh7/ESP8266-Update-Program-over-HTTPS/blob/master/.pio/build/nodemcuv2/firmware.bin) file  
+- Arduino IDE  
+  go to sketch choose export compile binary
+- PlatformIO VSCode  
+  Build project, go to .pio/build/nodemcuv2/
