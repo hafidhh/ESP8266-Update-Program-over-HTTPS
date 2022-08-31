@@ -33,7 +33,7 @@ python -m pip install cryptography
 ## .bin file (firmware)
 To get [.bin](https://github.com/hafidh7/ESP8266-Update-Program-over-HTTPS/blob/master/.pio/build/nodemcuv2/firmware.bin) file  
 - Arduino IDE  
-  go to sketch choose export compile binary
+  go to sketch choose export compile binary  
   <img src="./img/ArduinoIDE_bin.jpg" />  
 - PlatformIO VSCode  
   Build project, go to .pio/build/nodemcuv2/  
