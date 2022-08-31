@@ -1,18 +1,29 @@
+/*
+  ESP OTA Over HTTPS
+
+  Visit my github :
+  https://github.com/hafidh7/
+  https://github.com/hafidh7/ESP8266-Update-Program-over-HTTPS
+*/
+
+
 #include <ESP8266WiFi.h>
 #include <ESP8266HTTPClient.h>
 #include <ESP8266httpUpdate.h>
 #include <WiFiClientSecure.h>
 #include "certs.h"
- 
-const String FirmwareVer={"1.9"};
+
+// Change firmware version
+// Program will compare FIrmwareVer with URL_fw_Version file
+const String FirmwareVer={"1.9"}; // Change this
 unsigned long previousMillis_2 = 0;
 unsigned long previousMillis = 0;
 
 void ConnectWiFi()
 {
     // change ssid and password
-    const char* ssid = "your_ssid";
-    const char* password = "your_password";
+    const char* ssid = "your_ssid"; // Change this
+    const char* password = "your_password"; // change this
     Serial.print("Connecting to ");
     Serial.println(ssid);
     WiFi.begin(ssid, password); //connecting to wifi
@@ -47,8 +58,9 @@ void setClock()
 void FirmwareUpdate()
 {
     X509List cert(cert_DigiCert_Global_Root_CA);
-    //change URL_fw_Version and URL_fw_Bin with your bin file and version url.
+    //change URL_fw_Bin with your version url
     #define URL_fw_Version "/hafidh7/ESP8266-Update-Program-over-HTTPS/master/version.txt"
+    //change URL_fw_Bin with your bin file url
     #define URL_fw_Bin "https://raw.githubusercontent.com/hafidh7/ESP8266-Update-Program-over-HTTPS/master/.pio/build/nodemcuv2/firmware.bin"
     WiFiClientSecure client;
 
