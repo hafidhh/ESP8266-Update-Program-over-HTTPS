@@ -35,4 +35,5 @@ To get [.bin](https://github.com/hafidh7/ESP8266-Update-Program-over-HTTPS/blob/
 - Arduino IDE  
   go to sketch choose export compile binary
 - PlatformIO VSCode  
-  Build project, go to .pio/build/nodemcuv2/
+  Build project, go to .pio/build/nodemcuv2/  
+  <img src="./img/VSCode_bin.jpg" />  
